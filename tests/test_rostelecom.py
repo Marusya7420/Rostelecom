@@ -55,8 +55,8 @@ def test_authorization_invalid_email_pass(browser, auth_page):
     auth_page.click_on_with_password()
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_email()
-    auth_page.get_input_email('marusya7420mail.ru')
-    auth_page.get_input_password('7420')
+    auth_page.get_input_email('mcvfrmail.ru')
+    auth_page.get_input_password('1234')
     auth_page.click_login()
     try:
         WebDriverWait(browser, 10).until(
@@ -74,7 +74,7 @@ def test_authorization_invalid_ls_pass(browser, auth_page):
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_ls()
     auth_page.get_input_ls(22222)
-    auth_page.get_input_password('7420')
+    auth_page.get_input_password('1234')
     auth_page.click_login()
     try:
         WebDriverWait(browser, 10).until(
@@ -93,7 +93,7 @@ def test_authorization_invalid_phone_pass(browser, auth_page):
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_phone()
     auth_page.get_input_phone(999999999)
-    auth_page.get_input_password('Maha')
+    auth_page.get_input_password('Mdvn')
     auth_page.click_login()
     try:
         WebDriverWait(browser, 10).until(
@@ -128,7 +128,7 @@ def test_field_email_auth(browser, auth_page, email_value):
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_email()
     auth_page.get_input_email(email_value)
-    auth_page.get_input_password('7420Maha')
+    auth_page.get_input_password('вставить валидные тестовые данные')
     auth_page.click_login()
     try:
         WebDriverWait(browser, 10).until(
@@ -147,7 +147,7 @@ def test_field_password_auth(browser, auth_page, password_value):
     auth_page.click_on_with_password()
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_email()
-    auth_page.get_input_email('marusya7420@mail.ru')
+    auth_page.get_input_email('вставитьвалидные тестовые данные')
     auth_page.get_input_password(password_value)
     auth_page.click_login()
     try:
@@ -169,7 +169,7 @@ def test_field_ls_auth(browser,auth_page, ls_value):
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_ls()
     auth_page.get_input_ls(ls_value)
-    auth_page.get_input_password('7420Maha')
+    auth_page.get_input_password('вставитьвалидные тестовые данные')
     auth_page.click_auth_login()
     if WebDriverWait(browser, 10).until(
             EC.presence_of_element_located((By.XPATH, '//*[@id=\"username-meta\"]'))
@@ -189,7 +189,7 @@ def test_field_phone_auth(browser,auth_page, phone_value):
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_phone()
     auth_page.get_input_phone(phone_value)
-    auth_page.get_input_password('7420Maha')
+    auth_page.get_input_password('вставить валидные тестовые данные')
     auth_page.click_auth_login()
     try:
         WebDriverWait(browser, 10).until(
@@ -284,9 +284,9 @@ def test_field_name_register(browser, auth_page, register_page, name_value):
     wait = WebDriverWait(browser, 5)
     register_page.click_btn_register()
     register_page.get_input_name(name_value)
-    register_page.get_input_surname('Кузнецова')
+    register_page.get_input_surname('Иванов')
     register_page.get_input_region('Санкт-Петербург г')
-    register_page.LOCATOR_EMAIL_OR_PHONE('Maha7420@yandex.ru')
+    register_page.LOCATOR_EMAIL_OR_PHONE('Iv@mail.ru')
     register_page.get_input_pass('12345mmM')
     register_page.get_input_pass_2('12345mmM')
     register_page.click_btn_reg_account()
@@ -307,10 +307,10 @@ def test_field_surname_register(browser, auth_page, register_page, surname_value
     auth_page.click_on_with_password()
     wait = WebDriverWait(browser, 5)
     register_page.click_btn_register()
-    register_page.get_input_name('Мария')
+    register_page.get_input_name('Иван')
     register_page.get_input_surname(surname_value)
     register_page.get_input_region('Санкт-Петербург г')
-    register_page.LOCATOR_EMAIL_OR_PHONE('Maha7420@yandex.ru')
+    register_page.LOCATOR_EMAIL_OR_PHONE('Iv@mail.ru')
     register_page.get_input_pass('12345mmM')
     register_page.get_input_pass_2('12345mmM')
     register_page.click_btn_reg_account()
@@ -348,8 +348,8 @@ def test_field_email_register(browser, auth_page, register_page, email_value):
     auth_page.click_on_with_password()
     wait = WebDriverWait(browser, 5)
     register_page.click_btn_register()
-    register_page.get_input_name('Мария')
-    register_page.get_input_surname('Кузнецова')
+    register_page.get_input_name('Иван')
+    register_page.get_input_surname('Иванов')
     register_page.get_input_region('Санкт-Петербург г')
     register_page.LOCATOR_EMAIL_OR_PHONE(email_value)
     register_page.get_input_pass('12345mmM')
@@ -372,10 +372,10 @@ def test_field_name_register(browser, auth_page, register_page, pass_value):
     auth_page.click_on_with_password()
     wait = WebDriverWait(browser, 5)
     register_page.click_btn_register()
-    register_page.get_input_name('Мария')
-    register_page.get_input_surname('Кузнецова')
+    register_page.get_input_name('Иван')
+    register_page.get_input_surname('Иванов')
     register_page.get_input_region('Санкт-Петербург г')
-    register_page.LOCATOR_EMAIL_OR_PHONE('Maha7420@yandex.ru')
+    register_page.LOCATOR_EMAIL_OR_PHONE('Iv@mail..ru')
     register_page.get_input_pass(pass_value)
     register_page.click_btn_reg_account()
     current_url = browser.current_url
