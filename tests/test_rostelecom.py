@@ -16,8 +16,8 @@ def test_authorization_valid_email(browser, auth_page):
     auth_page.click_on_with_password()
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_email()
-    auth_page.get_input_email('marusya7420@mail.ru')
-    auth_page.get_input_password('7420Maha')
+    auth_page.get_input_email('вставить валидные тестовые данные')
+    auth_page.get_input_password('вставить валидные тестовые данные')
     wait = WebDriverWait(browser, 5)
     auth_page.click_login()
     try:
@@ -35,8 +35,8 @@ def test_authorization_valid_ls(browser, auth_page):
     auth_page.click_on_with_password()
     wait = WebDriverWait(browser, 5)
     auth_page.click_auth_ls()
-    auth_page.get_input_ls('278011897889')
-    auth_page.get_input_password('7420Maha')
+    auth_page.get_input_ls('вставить валидные тестовые данные')
+    auth_page.get_input_password('вставить валидные тестовые данные')
     auth_page.click_login()
     try:
         WebDriverWait(browser, 10).until(
